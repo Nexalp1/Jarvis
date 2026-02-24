@@ -1,0 +1,28 @@
+{
+  "assistant_name": "Jarvis",
+  "wake_word": "jarvis",
+  "language": "pt-BR",
+  "llm": {
+    "provider": "ollama",
+    "model": "phi3",
+    "endpoint": "http://localhost:11434/api/generate"
+  },
+  "voice": {
+    "sample_rate": 16000,
+    "channels": 1,
+    "block_size": 8000,
+    "vosk_model_path": "models/vosk-pt-br",
+    "continuous_listening": true
+  },
+  "memory": {
+    "sqlite_path": "memory/jarvis.db"
+  },
+  "engineering": {
+    "backup_dir": "engineer/backups",
+    "proposals_dir": "engineer/proposals"
+  },
+  "logging": {
+    "path": "logs/jarvis.log",
+    "level": "INFO"
+  }
+}
